@@ -2,6 +2,7 @@ package openrtb2
 
 import (
 	"encoding/json"
+
 	"github.com/prebid/openrtb/v20/adcom1"
 )
 
@@ -144,6 +145,14 @@ type App struct {
 	//   Comma separated list of keywords about the app. Only one of
 	//   ‘keywords’ or ‘kwarray’ may be present.
 	Keywords string `json:"keywords,omitempty"`
+
+	// Attribute:
+	//   blocklists
+	// Type:
+	//   string array
+	// Description:
+	//   Array of blocklist use for Rubicon
+	Blocklists []string `json:"blocklists,omitempty"`
 
 	// Attribute:
 	//   kwarray
